@@ -7,5 +7,6 @@ MageMagick_Protect
 Compatible with  Magento v1.5.1
 
 [Demo http://staging-v151.magemagick.com/](http://staging-v151.magemagick.com/)
-* Login: john.doe@example.com
-* Password: qwerty
+
+- Login: john.doe@example.com
+- Password: qwerty
