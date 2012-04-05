@@ -49,6 +49,7 @@ class MageMagick_Protect_Model_Observer
         $controllerName = $request->getControllerName();
         $action         = $request->getActionName();
 
+        // TODO: use Mage::app()->getStore()->isAdmin()
         if ($moduleName == 'admin') {
             return $this;
         }
