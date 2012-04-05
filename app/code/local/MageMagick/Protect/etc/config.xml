@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageMagick_Protect>
+            <version>0.1.0</version>
+        </MageMagick_Protect>
+    </modules>
+
+    <frontend>
+        <routers>
+            <mmprotect>
+                <use>standard</use>
+                <args>
+                    <module>MageMagick_Protect</module>
+                    <frontName>mmprotect</frontName>
+                </args>
+            </mmprotect>
+        </routers>
+        <layout>
+            <updates>
+                <mmprotect module="MageMagick_Protect">
+                    <file>mmprotect.xml</file>
+                </mmprotect>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml />
+
+    <global>
+        <helpers>
+            <protect>
+                <class>MageMagick_Protect_Helper</class>
+            </protect>
+        </helpers>
+        <events>
+          <controller_action_predispatch>
+            <observers>
+                <magemagick_protect_observer>
+                    <type>singleton</type>
+                    <class>MageMagick_Protect_Model_Observer</class>
+                    <method>checkAccess</method>
+                </magemagick_protect_observer>
+            </observers>
+          </controller_action_predispatch>
+
+          <controller_action_layout_load_before>
+                <observers>
+                    <magemagick_protect_layout_observer>
+                        <type>singleton</type>
+                        <class>MageMagick_Protect_Model_Observer</class>
+                        <method>updateLayout</method>
+                    </magemagick_protect_layout_observer>
+                </observers>
+          </controller_action_layout_load_before>
+        </events>
+    </global>
+
+</config>

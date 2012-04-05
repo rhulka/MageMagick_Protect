@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <mmprotect_splash_page>
+        <reference name="root">
+            <action method="setTemplate"><template>mmprotect/splash-screen.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/splash-screen.css</stylesheet></action>
+        </reference>
+        <reference name="content"></reference>
+    </mmprotect_splash_page>
+    <mmprotect_splash_default>
+        <reference name="root">
+            <action method="setTemplate"><template>mmprotect/splash-screen.phtml</template></action>
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/splash-screen.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <remove name="cms.wrapper" />
+            <block type="customer/form_login" name="customer_form_login" template="customer/form/login.phtml"/>
+        </reference>
+    </mmprotect_splash_default>
+    <mmprotect_splash_create>
+        <reference name="root">
+            <action method="setTemplate"><template>mmprotect/splash-screen.phtml</template></action>
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/splash-screen.css</stylesheet></action>
+        </reference>
+    </mmprotect_splash_create>
+    <mmprotect_splash_forgotpassword>
+        <reference name="root">
+            <action method="setTemplate"><template>mmprotect/splash-screen.phtml</template></action>
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/splash-screen.css</stylesheet></action>
+        </reference>
+    </mmprotect_splash_forgotpassword>
+    <mmprotect_splash_login>
+        <reference name="root">
+            <action method="setTemplate"><template>mmprotect/splash-screen.phtml</template></action>
+            <action method="setIsHandle"><applied>1</applied></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/splash-screen.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <remove name="cms.wrapper" />
+        </reference>
+    </mmprotect_splash_login>
+
+</layout>

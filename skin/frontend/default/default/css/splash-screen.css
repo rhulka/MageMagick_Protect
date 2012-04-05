@@ -1,0 +1,32 @@
+body {
+    background: url('../images/mmprotect/splash-bg-example.jpg') no-repeat center!important;
+}
+
+.mpp-footer-menu {
+    margin-top: 50px;
+}
+
+a {
+    color: #333;
+    font-size: 12pt;
+}
+
+.mpp-footer-menu a {
+    color: #333;
+    font-size: 14pt;
+}
+
+.mpp-footer-menu ul,
+.mpp-footer-menu li {
+    list-style: none;
+}
+
+.mpp-footer-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.std {
+    background-color: #fff;
+    padding: 10px;
+}
